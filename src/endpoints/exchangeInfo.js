@@ -1,10 +1,11 @@
+// @flow
 import rp from 'request-promise';
 import console from 'better-console';
 import 'colors';
 
 export default async () => {
   try {
-    const data = await rp({
+    const data: Array<mixed> = await rp({
       uri: 'https://api.binance.com/api/v1/exchangeInfo',
       json: true,
     });
