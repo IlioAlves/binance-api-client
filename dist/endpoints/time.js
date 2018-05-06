@@ -29,16 +29,12 @@ exports.default = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(functi
 
         case 3:
           data = _context.sent;
-
-          console.log(('The server unix time is ' + data.serverTime).green);
-          _context.next = 10;
-          break;
+          return _context.abrupt('return', data);
 
         case 7:
           _context.prev = 7;
           _context.t0 = _context['catch'](0);
-
-          console.error('Ops! We got an error:'.red, _context.t0.red);
+          throw Error(_context.t0);
 
         case 10:
         case 'end':

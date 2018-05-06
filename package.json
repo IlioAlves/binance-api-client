@@ -6,7 +6,7 @@
   "scripts": {
     "babel": "babel src --out-dir dist --presets=flow",
     "lint": "eslint -f table .",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/mocha --compilers js:babel-core/register --reporter spec",
     "flow": "flow",
     "flow:check": "flow check ./src/"
   },
@@ -25,8 +25,11 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-flow": "^6.23.0",
     "better-console": "^1.0.1",
+    "chai": "^4.1.2",
     "colors": "^1.2.4",
     "eslint": "^4.19.1",
+    "mocha": "^5.1.1",
+    "nock": "^9.2.5",
     "request": "^2.85.0",
     "request-promise": "^4.2.2",
     "yargs": "^11.0.0"

@@ -15,8 +15,8 @@ export default async (args: { symbol: string, limit: number }) => {
       },
       json: true,
     });
-    console.table(data);
+    return data;
   } catch (error) {
-    console.trace('Ops! We got an error:'.red, error.red);
+    throw Error(error);
   }
 };

@@ -39,16 +39,12 @@ exports.default = function () {
 
           case 4:
             data = _context.sent;
-
-            _betterConsole2.default.table(data);
-            _context.next = 11;
-            break;
+            return _context.abrupt('return', data);
 
           case 8:
             _context.prev = 8;
             _context.t0 = _context['catch'](1);
-
-            _betterConsole2.default.trace('Ops! We got an error:'.red, _context.t0.red);
+            throw Error(_context.t0);
 
           case 11:
           case 'end':
